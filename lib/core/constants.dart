@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:medlink/core/colors.dart';
 
-///--------Colors---------///
-const Color kPurple = Color(0xFF4945EC);
-const Color kPurple20 = Color(0xFFEEEDFF);
-
-const Color kFuchsia = Color(0xFFFC4747);
-
-const Color kDark = Color(0xFF353535);
+///--------Paddings
+///---------//
 
 const double kDefaultPadding = 16.0;
 const double kDefaultPadding2x = 32.0;
@@ -14,41 +10,43 @@ const double kDefaultPadding2x = 32.0;
 ///----TextStyles----///
 const TextStyle kHeading = TextStyle(fontWeight: FontWeight.w400, fontSize: 24);
 
-const TextStyle kBody = TextStyle(fontWeight: FontWeight.normal, fontSize: 12);
+const TextStyle kBody = TextStyle(fontWeight: FontWeight.normal, fontSize: 14);
+const TextStyle kBodyLarge =
+    TextStyle(fontWeight: FontWeight.normal, fontSize: 16);
 const TextStyle kBodyBold =
-    TextStyle(fontWeight: FontWeight.bold, fontSize: 12);
+    TextStyle(fontWeight: FontWeight.bold, fontSize: 14);
 
 ///----------Text Form Field styles ---------////
 InputDecoration customTextFieldDecoration = InputDecoration(
-  errorStyle: kBody.copyWith(color: kFuchsia),
+  errorStyle: kBody.copyWith(color: kRedPrimary),
 
   errorBorder: OutlineInputBorder(
     gapPadding: 0,
-    borderSide: const BorderSide(width: 1, color: kFuchsia),
+    borderSide: const BorderSide(width: 1, color: kRedPrimary),
     borderRadius: BorderRadius.circular(
-      kDefaultPadding,
+      kDefaultPadding2x,
     ),
   ),
 
   border: OutlineInputBorder(
     gapPadding: 0,
     borderSide: BorderSide.none,
-    borderRadius: BorderRadius.circular(kDefaultPadding),
+    borderRadius: BorderRadius.circular(kDefaultPadding2x),
   ),
   focusedBorder: OutlineInputBorder(
     gapPadding: 0,
-    borderSide: const BorderSide(width: 2, color: kPurple),
-    borderRadius: BorderRadius.circular(kDefaultPadding),
+    borderSide: const BorderSide(width: 2, color: kPurple60),
+    borderRadius: BorderRadius.circular(kDefaultPadding2x),
   ),
   enabledBorder: OutlineInputBorder(
     gapPadding: 0,
     borderSide: BorderSide.none,
-    borderRadius: BorderRadius.circular(kDefaultPadding),
+    borderRadius: BorderRadius.circular(kDefaultPadding2x),
   ),
-  hoverColor: kPurple20.withOpacity(.5),
-  isDense: false,
+  hoverColor: kPurple80,
+  isDense: true,
   filled: true,
-  fillColor: kPurple20,
+  fillColor: kNeutralVar95,
   hintStyle: kBody,
 
   // fillColor: kPurple20,
